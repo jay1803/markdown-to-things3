@@ -1,7 +1,7 @@
 #!.env/bin/python
 import os
 import json
-
+import urllib.parse 
 # folder = './files/'
 # file_list = os.listdir(folder)
 # for file_name in file_list:
@@ -60,5 +60,5 @@ for title in content:
             }}
         data[-1]['attributes']['items'].append(todo)
 
-things_url = 'things:///add-json?data=' + json.dumps(data)
+things_url = 'things:///add-json?data=' + urllib.parse.quote(json.dumps(data))
 print(things_url)
