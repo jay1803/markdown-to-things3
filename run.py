@@ -2,13 +2,7 @@
 import os
 import json
 import urllib.parse 
-# folder = './files/'
-# file_list = os.listdir(folder)
-# for file_name in file_list:
-#     print(file_list.index(file_name), file_name)
 
-# index = input('Type file number of the file:')
-# file_path = folder + file_list[int(index)]
 file = open('/Users/Max/GitHub/learning/python/markdown-to-things/md.txt')
 
 data = []
@@ -16,7 +10,6 @@ data = []
 content = file.readlines()
 
 for title in content:
-    print(content.index(title))
     if title[:2] == '# ':
         project = {
             'type': 'project',
