@@ -59,7 +59,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>cd /Users/Max/GitHub/learning/python/markdown-to-things/
+					<string>cd your_path/markdown-to-things/
 ./run.py</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -172,8 +172,6 @@
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
@@ -354,8 +352,6 @@
 						<string>5</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
@@ -369,7 +365,7 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>4C6659B2-46BF-4E37-8EA9-A09B5330CD53</key>
+		<key>0AE11826-7B9D-47AF-AAD8-D0B7A06C6DA9</key>
 		<dict>
 			<key>from</key>
 			<string>3B57850D-7F7D-4279-A676-80E22DE45FEC - 3B57850D-7F7D-4279-A676-80E22DE45FEC</string>

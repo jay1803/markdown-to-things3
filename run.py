@@ -1,16 +1,18 @@
 #!.env/bin/python
 import os
 import json
-import urllib.parse 
+import urllib.parse
 
-file = open('/Users/Max/GitHub/learning/python/markdown-to-things/md.txt')
+file = open('/Users/Max/GitHub/learning/python/markdown-to-things/md.txt', encoding='utf-8')
 
 data = []
 
 content = file.readlines()
 
 for title in content:
-    if title[:2] == '# ':
+    if not title.rstrip() or title[:3] == '---' or title[:3] == '###':
+        pass
+    elif title[:2] == '# ':
         project = {
             'type': 'project',
             'attributes': {
