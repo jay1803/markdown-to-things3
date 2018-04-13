@@ -3,7 +3,9 @@ import os
 import json
 import urllib.parse
 
-file = open('/Users/Max/GitHub/learning/python/markdown-to-things/md.txt', encoding='utf-8')
+path = os.path.dirname(os.path.abspath(__file__))
+
+file = open(path + '/md.txt', encoding='utf-8')
 
 data = []
 
