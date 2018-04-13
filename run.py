@@ -9,7 +9,7 @@ import urllib.parse
 
 # index = input('Type file number of the file:')
 # file_path = folder + file_list[int(index)]
-file = open('./md.txt')
+file = open('/Users/Max/GitHub/learning/python/markdown-to-things/md.txt')
 
 data = []
 
@@ -53,11 +53,18 @@ for title in content:
             data[-1]['attributes']['items'][-1]['attributes']['checklist-items'] = []
         data[-1]['attributes']['items'][-1]['attributes']['checklist-items'].append(checklist)
     else:
-        todo = {
-            'type': 'to-do',
-            'attributes': {
-                'title': title.rstrip()
-            }}
+        if title[:2] == '* ':
+            todo = {
+                'type': 'to-do',
+                'attributes': {
+                    'title': title[2:].rstrip()
+                }}
+        else:
+            todo = {
+                'type': 'to-do',
+                'attributes': {
+                    'title': title.rstrip()
+                }}
         data[-1]['attributes']['items'].append(todo)
 
 things_url = 'things:///add-json?data=' + urllib.parse.quote(json.dumps(data))
